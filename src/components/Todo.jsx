@@ -1,19 +1,11 @@
-import React from "react"
+import React from "react";
 
-function Todo({todo,onDelete}){
-    return (
-        <ul className="todo-list">
-      {todos.map((todo, index) => (
-        <li key={index} className="todo-item">
-          <span>{todo}</span>
-          <button className="delete-btn" onClick={() => onDelete(index)}>
-            Delete
-          </button>
-        </li>
-      ))}
-    </ul>
-    )
+function Todo({ text, onDelete }) {
+  return (
+    <li>
+      {text} <button onClick={onDelete}>Delete</button>
+    </li>
+  );
 }
 
 export default Todo;
-
